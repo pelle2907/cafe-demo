@@ -71,7 +71,7 @@ nav button:hover {
 }
 
 .hero-text {
-  max-width: 850px;
+  max-width: 900px;
   margin: auto;
   text-align: center;
 }
@@ -109,8 +109,12 @@ p {
   font-size: 18px;
 }
 
+.intro {
+  max-width: 760px;
+}
+
 .hero-text p {
-  max-width: 660px;
+  max-width: 700px;
   margin: 24px auto 0;
   font-size: 20px;
 }
@@ -184,24 +188,13 @@ p {
 }
 
 .content-page {
-  max-width: 1080px;
+  max-width: 1120px;
   margin: auto;
 }
 
-.warm-card {
-  margin-top: 34px;
-  padding: 38px;
-  border-radius: 32px;
-  background: #f4dfc5;
-  border: 1px solid rgba(80, 50, 30, 0.12);
-  box-shadow: 0 25px 60px rgba(80, 50, 30, 0.12);
-  text-align: center;
-}
-
-.warm-card span {
-  font-size: 78px;
-  display: block;
-  margin-bottom: 18px;
+.menu-category {
+  margin-top: 48px;
+  color: #7b3f1d;
 }
 
 .menu-grid,
@@ -209,11 +202,12 @@ p {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 22px;
-  margin-top: 34px;
+  margin-top: 24px;
 }
 
 .menu-item,
-.contact-grid div {
+.contact-grid div,
+.contact-note {
   padding: 34px;
   border-radius: 30px;
   background: #fff1dd;
@@ -228,6 +222,10 @@ p {
   font-family: Arial, sans-serif;
   font-weight: 900;
   font-size: 22px;
+}
+
+.contact-note {
+  margin-top: 26px;
 }
 
 .reservation-form {

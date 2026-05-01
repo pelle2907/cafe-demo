@@ -6,6 +6,11 @@ function showPage(pageId) {
   });
 
   document.getElementById(pageId).classList.remove("hidden");
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
 }
 
 function sendReservation(event) {
