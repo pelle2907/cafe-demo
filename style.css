@@ -61,7 +61,13 @@ nav button:hover {
   animation: fade 0.25s ease;
 }
 
+#home.page {
+  padding: 0;
+}
+
 .hero {
+  min-height: 100vh;
+  padding: 135px 24px 70px;
   position: relative;
   display: flex;
   align-items: center;
