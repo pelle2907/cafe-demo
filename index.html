@@ -59,6 +59,28 @@
   </div>
 </section>
 
+<section class="page-section">
+  <div class="hours-box">
+    <p class="tag">ÖFFNUNGSZEITEN</p>
+    <h2>Wir sind für dich da.</h2>
+
+    <div class="hours-grid">
+      <div>
+        <strong>Montag – Freitag</strong>
+        <span>08:00 – 18:00</span>
+      </div>
+      <div>
+        <strong>Samstag</strong>
+        <span>09:00 – 16:00</span>
+      </div>
+      <div>
+        <strong>Sonntag</strong>
+        <span>geschlossen</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="menu" class="page hidden content-page">
   <p class="tag">UNSERE KARTE</p>
   <h2>Frisch, einfach und mit Liebe serviert.</h2>
@@ -72,7 +94,9 @@
     <div>
       <p class="tag">FRISCH AUS DER VITRINE</p>
       <h3>Gebäck, Snacks und kleine Lieblingsstücke.</h3>
-      <p>Perfekt für den schnellen Kaffee oder eine entspannte Pause zwischendurch.</p>
+      <p>
+        Perfekt für den schnellen Kaffee, ein kleines Frühstück oder eine entspannte Pause zwischendurch.
+      </p>
     </div>
   </div>
 
@@ -232,7 +256,7 @@
       <h3>Ein Platz zum Ankommen.</h3>
       <p>
         Ob morgens vor der Arbeit, am Wochenende mit Freunden oder für eine kurze Pause:
-        Im Café Milano findest du warme Atmosphäre und guten Kaffee.
+        Im Café Milano findest du warme Atmosphäre, guten Kaffee und kleine Lieblingsmomente.
       </p>
       <button class="btn primary" onclick="showPage('reservation')">Reservieren</button>
     </div>
@@ -242,7 +266,9 @@
 <section id="reservation" class="page hidden content-page">
   <p class="tag">RESERVIERUNG</p>
   <h2>Reserviere deinen Tisch.</h2>
-  <p class="intro">Schick uns deine Anfrage – wir melden uns so schnell wie möglich zurück.</p>
+  <p class="intro">
+    Schick uns deine Anfrage – wir melden uns so schnell wie möglich zurück.
+  </p>
 
   <form class="reservation-form" onsubmit="sendReservation(event)">
     <input type="text" id="name" placeholder="Dein Name" required>

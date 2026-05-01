@@ -195,6 +195,41 @@ p {
   box-shadow: 0 24px 60px rgba(80, 50, 30, 0.14);
 }
 
+.hours-box {
+  max-width: 1120px;
+  margin: auto;
+  padding: 42px;
+  border-radius: 36px;
+  background: #fff1dd;
+  border: 1px solid rgba(80, 50, 30, 0.12);
+  box-shadow: 0 20px 45px rgba(80, 50, 30, 0.08);
+}
+
+.hours-grid {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.hours-grid div {
+  padding: 22px;
+  border-radius: 24px;
+  background: #fff8ee;
+  border: 1px solid rgba(80, 50, 30, 0.1);
+}
+
+.hours-grid strong,
+.hours-grid span {
+  display: block;
+  font-family: Arial, sans-serif;
+}
+
+.hours-grid span {
+  margin-top: 8px;
+  color: #7b3f1d;
+}
+
 .content-page {
   max-width: 1120px;
   margin: auto;
@@ -341,6 +376,7 @@ textarea {
   }
 
   .story-grid,
+  .hours-grid,
   .feature-image,
   .menu-grid,
   .contact-grid,
