@@ -7,22 +7,10 @@ function showPage(pageId) {
 
   document.getElementById(pageId).classList.remove("hidden");
 
-  const nav = document.getElementById("navMenu");
-  if (nav) {
-    nav.classList.remove("show");
-  }
-
   window.scrollTo({
     top: 0,
     behavior: "smooth"
   });
-}
-
-function toggleMenu() {
-  const nav = document.getElementById("navMenu");
-  if (nav) {
-    nav.classList.toggle("show");
-  }
 }
 
 function sendReservation(event) {

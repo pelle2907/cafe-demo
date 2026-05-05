@@ -16,8 +16,6 @@
     <button onclick="showPage('contact')">Kontakt</button>
     <button onclick="showPage('reservation')">Reservierung</button>
   </nav>
-
-  <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Menü öffnen">☰</button>
 </header>
 
 <nav class="bottom-nav">
@@ -64,7 +62,9 @@
         </p>
       </div>
 
-      <img src="images/Interior.JPG" alt="Gemütlicher Innenraum im Café Milano">
+      <div class="image-frame portrait-fix">
+        <img src="images/Interior.JPG" alt="Gemütlicher Innenraum im Café Milano">
+      </div>
     </div>
   </section>
 
@@ -121,13 +121,6 @@
     </div>
 
     <div class="menu-item image-card">
-      <img src="images/coffee.jpg" alt="Kaffee">
-      <h3>Espresso</h3>
-      <p>Klein, stark und perfekt für den Start.</p>
-      <span>2,50 €</span>
-    </div>
-
-    <div class="menu-item image-card">
       <img src="images/Cappuccino.jpg" alt="Latte Macchiato">
       <h3>Latte Macchiato</h3>
       <p>Mild, schaumig und besonders beliebt.</p>
@@ -135,7 +128,14 @@
     </div>
 
     <div class="menu-item image-card">
-      <img src="images/coffee.jpg" alt="Americano">
+      <img src="images/Cappuccino.jpg" alt="Espresso">
+      <h3>Espresso</h3>
+      <p>Klein, stark und perfekt für den Start.</p>
+      <span>2,50 €</span>
+    </div>
+
+    <div class="menu-item image-card">
+      <img src="images/Cappuccino.jpg" alt="Americano">
       <h3>Americano</h3>
       <p>Schwarz, klar und angenehm kräftig.</p>
       <span>3,20 €</span>
@@ -153,7 +153,7 @@
     </div>
 
     <div class="menu-item image-card">
-      <img src="images/butter-croissant.jpg" alt="Butter Croissant">
+      <img src="images/Croissant.jpg" alt="Butter Croissant">
       <h3>Butter-Croissant</h3>
       <p>Frisch, weich und genau richtig zum Kaffee.</p>
       <span>2,90 €</span>
@@ -238,7 +238,10 @@
   </div>
 
   <div class="contact-highlight">
-    <img src="images/Interior.JPG" alt="Café Milano Atmosphäre">
+    <div class="image-frame portrait-fix">
+      <img src="images/Interior.JPG" alt="Café Milano Atmosphäre">
+    </div>
+
     <div>
       <h3>Ein Platz zum Ankommen.</h3>
       <p>
