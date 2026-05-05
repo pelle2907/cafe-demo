@@ -11,12 +11,14 @@
 <header class="header">
   <div class="logo" onclick="showPage('home')">Café Milano</div>
 
-  <nav>
+  <nav id="navMenu" class="nav">
     <button onclick="showPage('home')">Start</button>
     <button onclick="showPage('menu')">Karte</button>
     <button onclick="showPage('contact')">Kontakt</button>
     <button class="reserve-btn" onclick="showPage('reservation')">Reservierung</button>
   </nav>
+
+  <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
 </header>
 
 <main>

@@ -28,14 +28,16 @@ body {
   font-weight: bold;
   color: #4b2e1d;
   cursor: pointer;
+  white-space: nowrap;
 }
 
-nav {
+.nav {
   display: flex;
   gap: 12px;
+  align-items: center;
 }
 
-nav button {
+.nav button {
   background: transparent;
   border: none;
   color: #4b2e1d;
@@ -46,13 +48,25 @@ nav button {
   border-radius: 999px;
 }
 
-nav button:hover {
+.nav button:hover {
   background: #f4dfc5;
 }
 
 .reserve-btn {
   background: #7b3f1d !important;
   color: #fff8ee !important;
+}
+
+.mobile-menu-btn {
+  display: none;
+  border: none;
+  background: #7b3f1d;
+  color: #fff8ee;
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  font-size: 21px;
+  cursor: pointer;
 }
 
 .page {
@@ -364,17 +378,49 @@ textarea {
   }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 950px) {
   .header {
-    padding: 18px 24px;
+    padding: 16px 22px;
   }
 
-  nav {
+  .nav {
+    position: absolute;
+    top: 78px;
+    left: 16px;
+    right: 16px;
     display: none;
+    flex-direction: column;
+    gap: 8px;
+    padding: 14px;
+    border-radius: 24px;
+    background: rgba(255, 248, 238, 0.98);
+    border: 1px solid rgba(80, 50, 30, 0.12);
+    box-shadow: 0 22px 60px rgba(80, 50, 30, 0.20);
+  }
+
+  .nav.show {
+    display: flex;
+  }
+
+  .nav button {
+    width: 100%;
+    text-align: left;
+    padding: 14px 16px;
+    background: #fff1dd;
+    border-radius: 16px;
+    font-size: 15px;
+  }
+
+  .reserve-btn {
+    text-align: center !important;
+  }
+
+  .mobile-menu-btn {
+    display: block;
   }
 
   h1 {
-    font-size: 42px;
+    font-size: 46px;
   }
 
   h2 {
@@ -400,5 +446,143 @@ textarea {
   textarea,
   .reservation-form button {
     grid-column: span 1;
+  }
+}
+
+@media (max-width: 620px) {
+  .header {
+    padding: 14px 16px;
+  }
+
+  .logo {
+    font-size: 21px;
+  }
+
+  .page {
+    padding: 105px 14px 45px;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 125px 18px 60px;
+    align-items: flex-end;
+  }
+
+  .hero-content {
+    text-align: left;
+  }
+
+  .hero-content p {
+    margin: 18px 0 0;
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 38px;
+    line-height: 1.07;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  .tag {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  .hero-buttons {
+    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 15px 18px;
+  }
+
+  .page-section {
+    padding: 56px 14px;
+  }
+
+  .story-grid,
+  .hours-box,
+  .content-page {
+    width: 100%;
+  }
+
+  .hours-box {
+    padding: 24px;
+    border-radius: 26px;
+  }
+
+  .feature-image {
+    padding: 18px;
+    border-radius: 26px;
+  }
+
+  .feature-image img,
+  .story-grid img,
+  .contact-highlight img {
+    height: 245px;
+    border-radius: 24px;
+  }
+
+  .menu-grid,
+  .contact-grid {
+    gap: 16px;
+  }
+
+  .menu-item,
+  .contact-grid div,
+  .contact-highlight,
+  .reservation-form {
+    padding: 22px;
+    border-radius: 24px;
+  }
+
+  .menu-item img {
+    width: calc(100% + 44px);
+    height: 210px;
+    margin: -22px -22px 20px;
+  }
+
+  .menu-category {
+    margin-top: 38px;
+  }
+
+  .reservation-form {
+    gap: 14px;
+  }
+
+  input,
+  textarea {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 380px) {
+  h1 {
+    font-size: 34px;
+  }
+
+  .logo {
+    font-size: 19px;
+  }
+
+  .mobile-menu-btn {
+    width: 40px;
+    height: 40px;
   }
 }
