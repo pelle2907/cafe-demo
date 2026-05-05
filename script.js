@@ -20,20 +20,29 @@ function showPage(pageId) {
 
 function toggleMenu() {
   const nav = document.getElementById("navMenu");
-  nav.classList.toggle("show");
+  if (nav) {
+    nav.classList.toggle("show");
+  }
 }
 
 function sendReservation(event) {
   event.preventDefault();
 
-  const name = document.getElementById("name").value;
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+  const dateInput = document.getElementById("date");
+  const timeInput = document.getElementById("time");
+  const peopleInput = document.getElementById("people");
+  const messageInput = document.getElementById("message");
+
+  const name = nameInput.value;
 
   alert("Danke " + name + "! Deine Reservierungsanfrage wurde vorbereitet.");
 
-  document.getElementById("name").value = "";
-  document.getElementById("email").value = "";
-  document.getElementById("date").value = "";
-  document.getElementById("time").value = "";
-  document.getElementById("people").value = "";
-  document.getElementById("message").value = "";
+  nameInput.value = "";
+  emailInput.value = "";
+  dateInput.value = "";
+  timeInput.value = "";
+  peopleInput.value = "";
+  messageInput.value = "";
 }

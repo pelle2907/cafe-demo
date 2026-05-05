@@ -12,14 +12,20 @@
   <div class="logo" onclick="showPage('home')">Café Milano</div>
 
   <nav id="navMenu" class="nav">
-    <button onclick="showPage('home')">Start</button>
     <button onclick="showPage('menu')">Karte</button>
     <button onclick="showPage('contact')">Kontakt</button>
-    <button class="reserve-btn" onclick="showPage('reservation')">Reservierung</button>
+    <button onclick="showPage('reservation')">Reservierung</button>
   </nav>
 
-  <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+  <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Menü öffnen">☰</button>
 </header>
+
+<nav class="bottom-nav">
+  <button onclick="showPage('home')">Start</button>
+  <button onclick="showPage('menu')">Karte</button>
+  <button onclick="showPage('contact')">Kontakt</button>
+  <button onclick="showPage('reservation')">Reservieren</button>
+</nav>
 
 <main>
 
@@ -58,7 +64,7 @@
         </p>
       </div>
 
-      <img src="images/interior.jpg" alt="Gemütlicher Innenraum im Café Milano">
+      <img src="images/Interior.JPG" alt="Gemütlicher Innenraum im Café Milano">
     </div>
   </section>
 
@@ -69,7 +75,7 @@
 
       <div class="hours-grid">
         <div>
-          <strong>Montag – Freitag</strong>
+          <strong>Mo – Fr</strong>
           <span>08:00 – 18:00</span>
         </div>
         <div>
@@ -94,7 +100,7 @@
   </p>
 
   <div class="feature-image">
-    <img src="images/bakery.jpg" alt="Vitrine mit Croissants und Snacks">
+    <img src="images/bakery.JPG" alt="Vitrine mit Gebäck">
     <div>
       <p class="tag">FRISCH AUS DER VITRINE</p>
       <h3>Gebäck, Snacks und kleine Lieblingsstücke.</h3>
@@ -108,45 +114,31 @@
 
   <div class="menu-grid">
     <div class="menu-item image-card">
-      <img src="images/coffee.jpg" alt="Cappuccino">
+      <img src="images/Cappuccino.jpg" alt="Cappuccino">
       <h3>Cappuccino</h3>
       <p>Cremig, weich und mit feinem Milchschaum.</p>
       <span>3,80 €</span>
     </div>
 
     <div class="menu-item image-card">
-      <img src="images/espresso.jpg" alt="Espresso">
+      <img src="images/coffee.jpg" alt="Kaffee">
       <h3>Espresso</h3>
       <p>Klein, stark und perfekt für den Start.</p>
       <span>2,50 €</span>
     </div>
 
     <div class="menu-item image-card">
-      <img src="images/latte.jpg" alt="Latte Macchiato">
+      <img src="images/Cappuccino.jpg" alt="Latte Macchiato">
       <h3>Latte Macchiato</h3>
       <p>Mild, schaumig und besonders beliebt.</p>
       <span>4,20 €</span>
     </div>
 
     <div class="menu-item image-card">
-      <img src="images/americano.jpg" alt="Americano">
+      <img src="images/coffee.jpg" alt="Americano">
       <h3>Americano</h3>
       <p>Schwarz, klar und angenehm kräftig.</p>
       <span>3,20 €</span>
-    </div>
-
-    <div class="menu-item image-card">
-      <img src="images/chocolate.jpg" alt="Heiße Schokolade">
-      <h3>Heiße Schokolade</h3>
-      <p>Süß, warm und perfekt für ruhige Tage.</p>
-      <span>4,10 €</span>
-    </div>
-
-    <div class="menu-item image-card">
-      <img src="images/tea.jpg" alt="Tee">
-      <h3>Frischer Tee</h3>
-      <p>Verschiedene Sorten, sanft und aromatisch.</p>
-      <span>3,40 €</span>
     </div>
   </div>
 
@@ -154,7 +146,7 @@
 
   <div class="menu-grid">
     <div class="menu-item image-card">
-      <img src="images/croissant.jpg" alt="Pistazien Croissant">
+      <img src="images/Croissant.jpg" alt="Croissant">
       <h3>Pistazien-Croissant</h3>
       <p>Buttrig, leicht süß und perfekt zum Kaffee.</p>
       <span>4,20 €</span>
@@ -168,31 +160,17 @@
     </div>
 
     <div class="menu-item image-card">
-      <img src="images/schoko-croissant.jpg" alt="Schoko Croissant">
+      <img src="images/Croissant.jpg" alt="Schoko Croissant">
       <h3>Schoko-Croissant</h3>
       <p>Blättrig mit feiner Schokoladenfüllung.</p>
       <span>3,40 €</span>
     </div>
 
     <div class="menu-item image-card">
-      <img src="images/tiramisu.jpg" alt="Tiramisu">
-      <h3>Tiramisu Glas</h3>
-      <p>Cremig, italienisch und hausgemacht.</p>
+      <img src="images/bakery.JPG" alt="Süße Auswahl">
+      <h3>Milano Süßes</h3>
+      <p>Kleine Auswahl aus unserer Vitrine.</p>
       <span>5,20 €</span>
-    </div>
-
-    <div class="menu-item image-card">
-      <img src="images/cheesecake.jpg" alt="Cheesecake">
-      <h3>Cheesecake</h3>
-      <p>Sanft, cremig und mit feinem Boden.</p>
-      <span>4,90 €</span>
-    </div>
-
-    <div class="menu-item image-card">
-      <img src="images/cinnamon-roll.jpg" alt="Zimtschnecke">
-      <h3>Zimtschnecke</h3>
-      <p>Warm, süß und mit leichter Zimtnote.</p>
-      <span>3,70 €</span>
     </div>
   </div>
 
@@ -200,45 +178,31 @@
 
   <div class="menu-grid">
     <div class="menu-item image-card">
-      <img src="images/avocado.jpg" alt="Avocado Rucola Toast">
+      <img src="images/Avocado plus Rucula.jpg" alt="Avocado Rucola Toast">
       <h3>Avocado Rucola Toast</h3>
       <p>Frisch, grün und leicht mit Tomate und Rucola.</p>
       <span>7,20 €</span>
     </div>
 
     <div class="menu-item image-card">
-      <img src="images/toast.jpg" alt="Toast mit Ei und Avocado">
-      <h3>Toast mit Ei & Avocado</h3>
-      <p>Herzhaft, warm und perfekt zum Frühstück.</p>
+      <img src="images/Avocadotoast.jpg" alt="Avocado Toast">
+      <h3>Avocado Toast</h3>
+      <p>Herzhaft, frisch und perfekt zum Frühstück.</p>
       <span>7,90 €</span>
     </div>
 
     <div class="menu-item image-card">
-      <img src="images/panini.jpg" alt="Panini">
-      <h3>Panini Mozzarella</h3>
-      <p>Mit Tomate, Mozzarella und Basilikum.</p>
-      <span>6,50 €</span>
-    </div>
-
-    <div class="menu-item image-card">
-      <img src="images/focaccia.jpg" alt="Focaccia">
-      <h3>Focaccia</h3>
-      <p>Italienisch, weich und herzhaft belegt.</p>
-      <span>6,90 €</span>
-    </div>
-
-    <div class="menu-item image-card">
-      <img src="images/mozzarella-bowl.jpg" alt="Tomate Mozzarella Bowl">
-      <h3>Tomate-Mozzarella Bowl</h3>
-      <p>Frisch, leicht und mediterran.</p>
+      <img src="images/Toast mit Ei und Avocado.jpg" alt="Toast mit Ei und Avocado">
+      <h3>Toast mit Ei & Avocado</h3>
+      <p>Warm, sättigend und schön angerichtet.</p>
       <span>8,40 €</span>
     </div>
 
     <div class="menu-item image-card">
-      <img src="images/breakfast.jpg" alt="Milano Frühstücksteller">
-      <h3>Milano Frühstücksteller</h3>
-      <p>Croissant, Kaffee, Obst und kleine Beilage.</p>
-      <span>9,90 €</span>
+      <img src="images/Vitrine.jpg" alt="Vitrine">
+      <h3>Milano Snack</h3>
+      <p>Kleine herzhafte Auswahl aus der Vitrine.</p>
+      <span>6,50 €</span>
     </div>
   </div>
 </section>
@@ -266,10 +230,15 @@
       <h3>E-Mail</h3>
       <p>info@cafemilano.de</p>
     </div>
+
+    <div>
+      <h3>Instagram</h3>
+      <p>@cafemilano</p>
+    </div>
   </div>
 
   <div class="contact-highlight">
-    <img src="images/interior.jpg" alt="Café Milano Atmosphäre">
+    <img src="images/Interior.JPG" alt="Café Milano Atmosphäre">
     <div>
       <h3>Ein Platz zum Ankommen.</h3>
       <p>
@@ -289,13 +258,37 @@
   </p>
 
   <form class="reservation-form" onsubmit="sendReservation(event)">
-    <input type="text" id="name" placeholder="Dein Name" required>
-    <input type="email" id="email" placeholder="Deine E-Mail" required>
-    <input type="date" id="date" required>
-    <input type="time" id="time" required>
-    <input type="number" id="people" placeholder="Personen" min="1" required>
-    <textarea id="message" placeholder="Besondere Wünsche?"></textarea>
-    <button class="btn primary" type="submit">Reservierung anfragen</button>
+    <label>
+      Name
+      <input type="text" id="name" placeholder="Dein Name" required>
+    </label>
+
+    <label>
+      E-Mail
+      <input type="email" id="email" placeholder="Deine E-Mail" required>
+    </label>
+
+    <label>
+      Datum
+      <input type="date" id="date" required>
+    </label>
+
+    <label>
+      Uhrzeit
+      <input type="time" id="time" required>
+    </label>
+
+    <label>
+      Personen
+      <input type="number" id="people" placeholder="Anzahl Personen" min="1" required>
+    </label>
+
+    <label class="wide">
+      Nachricht
+      <textarea id="message" placeholder="Besondere Wünsche?"></textarea>
+    </label>
+
+    <button class="btn primary wide" type="submit">Reservierung anfragen</button>
   </form>
 </section>
 

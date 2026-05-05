@@ -7,6 +7,7 @@ body {
   font-family: Georgia, "Times New Roman", serif;
   background: #fff8ee;
   color: #3b2416;
+  padding-bottom: 0;
 }
 
 .header {
@@ -69,6 +70,10 @@ body {
   cursor: pointer;
 }
 
+.bottom-nav {
+  display: none;
+}
+
 .page {
   min-height: 100vh;
   padding: 135px 24px 70px;
@@ -85,7 +90,7 @@ body {
   position: relative;
   display: flex;
   align-items: center;
-  background-image: url("images/hero.jpg");
+  background-image: url("images/hero.JPG");
   background-size: cover;
   background-position: center;
   overflow: hidden;
@@ -287,7 +292,6 @@ p {
 
 .menu-item,
 .contact-grid div,
-.contact-note,
 .contact-highlight {
   padding: 34px;
   border-radius: 30px;
@@ -341,6 +345,15 @@ p {
   box-shadow: 0 20px 45px rgba(80, 50, 30, 0.08);
 }
 
+label {
+  font-family: Arial, sans-serif;
+  font-weight: 900;
+  color: #4b2e1d;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
 input,
 textarea {
   width: 100%;
@@ -350,15 +363,15 @@ textarea {
   font-family: Arial, sans-serif;
   font-size: 15px;
   outline: none;
+  background: #fff8ee;
 }
 
 textarea {
   min-height: 130px;
-  grid-column: span 2;
   resize: vertical;
 }
 
-.reservation-form button {
+.wide {
   grid-column: span 2;
 }
 
@@ -384,39 +397,48 @@ textarea {
   }
 
   .nav {
-    position: absolute;
-    top: 78px;
-    left: 16px;
-    right: 16px;
     display: none;
-    flex-direction: column;
-    gap: 8px;
-    padding: 14px;
-    border-radius: 24px;
-    background: rgba(255, 248, 238, 0.98);
-    border: 1px solid rgba(80, 50, 30, 0.12);
-    box-shadow: 0 22px 60px rgba(80, 50, 30, 0.20);
-  }
-
-  .nav.show {
-    display: flex;
-  }
-
-  .nav button {
-    width: 100%;
-    text-align: left;
-    padding: 14px 16px;
-    background: #fff1dd;
-    border-radius: 16px;
-    font-size: 15px;
-  }
-
-  .reserve-btn {
-    text-align: center !important;
   }
 
   .mobile-menu-btn {
     display: block;
+  }
+
+  .bottom-nav {
+    position: fixed;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    z-index: 2000;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 6px;
+    padding: 8px;
+    border-radius: 24px;
+    background: rgba(255, 248, 238, 0.96);
+    border: 1px solid rgba(80, 50, 30, 0.12);
+    box-shadow: 0 18px 45px rgba(80, 50, 30, 0.25);
+  }
+
+  .bottom-nav button {
+    border: none;
+    background: #fff1dd;
+    color: #4b2e1d;
+    font-family: Arial, sans-serif;
+    font-weight: 900;
+    border-radius: 18px;
+    padding: 11px 6px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+
+  .bottom-nav button:hover {
+    background: #7b3f1d;
+    color: #fff8ee;
+  }
+
+  body {
+    padding-bottom: 82px;
   }
 
   h1 {
@@ -428,13 +450,25 @@ textarea {
   }
 
   .story-grid,
-  .hours-grid,
   .feature-image,
-  .menu-grid,
-  .contact-grid,
   .contact-highlight,
   .reservation-form {
     grid-template-columns: 1fr;
+  }
+
+  .hours-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
   }
 
   .story-grid img,
@@ -443,8 +477,7 @@ textarea {
     height: 300px;
   }
 
-  textarea,
-  .reservation-form button {
+  .wide {
     grid-column: span 1;
   }
 }
@@ -458,13 +491,17 @@ textarea {
     font-size: 21px;
   }
 
+  .mobile-menu-btn {
+    display: none;
+  }
+
   .page {
-    padding: 105px 14px 45px;
+    padding: 100px 14px 45px;
   }
 
   .hero {
     min-height: auto;
-    padding: 125px 18px 60px;
+    padding: 120px 18px 54px;
     align-items: flex-end;
   }
 
@@ -478,21 +515,21 @@ textarea {
   }
 
   h1 {
-    font-size: 38px;
+    font-size: 36px;
     line-height: 1.07;
   }
 
   h2 {
-    font-size: 30px;
+    font-size: 29px;
   }
 
   h3 {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   p {
-    font-size: 16px;
-    line-height: 1.65;
+    font-size: 15.5px;
+    line-height: 1.62;
   }
 
   .tag {
@@ -513,18 +550,31 @@ textarea {
   }
 
   .page-section {
-    padding: 56px 14px;
-  }
-
-  .story-grid,
-  .hours-box,
-  .content-page {
-    width: 100%;
+    padding: 54px 14px;
   }
 
   .hours-box {
-    padding: 24px;
-    border-radius: 26px;
+    padding: 22px;
+    border-radius: 24px;
+  }
+
+  .hours-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .hours-grid div {
+    padding: 14px 8px;
+    border-radius: 16px;
+    text-align: center;
+  }
+
+  .hours-grid strong {
+    font-size: 12px;
+  }
+
+  .hours-grid span {
+    font-size: 12px;
   }
 
   .feature-image {
@@ -535,31 +585,62 @@ textarea {
   .feature-image img,
   .story-grid img,
   .contact-highlight img {
-    height: 245px;
-    border-radius: 24px;
+    height: 235px;
+    border-radius: 22px;
   }
 
-  .menu-grid,
-  .contact-grid {
-    gap: 16px;
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
 
-  .menu-item,
-  .contact-grid div,
-  .contact-highlight,
-  .reservation-form {
-    padding: 22px;
-    border-radius: 24px;
+  .menu-item {
+    padding: 14px;
+    border-radius: 20px;
   }
 
   .menu-item img {
-    width: calc(100% + 44px);
-    height: 210px;
-    margin: -22px -22px 20px;
+    width: calc(100% + 28px);
+    height: 118px;
+    margin: -14px -14px 14px;
   }
 
-  .menu-category {
-    margin-top: 38px;
+  .menu-item h3 {
+    font-size: 16px;
+  }
+
+  .menu-item p {
+    font-size: 13px;
+    line-height: 1.45;
+  }
+
+  .menu-item span {
+    font-size: 17px;
+    margin-top: 10px;
+  }
+
+  .contact-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .contact-grid div {
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .contact-grid h3 {
+    font-size: 17px;
+  }
+
+  .contact-grid p {
+    font-size: 14px;
+  }
+
+  .contact-highlight,
+  .reservation-form {
+    padding: 20px;
+    border-radius: 24px;
   }
 
   .reservation-form {
@@ -574,15 +655,36 @@ textarea {
 
 @media (max-width: 380px) {
   h1 {
-    font-size: 34px;
+    font-size: 32px;
   }
 
   .logo {
     font-size: 19px;
   }
 
-  .mobile-menu-btn {
-    width: 40px;
-    height: 40px;
+  .bottom-nav {
+    left: 8px;
+    right: 8px;
+    bottom: 8px;
+  }
+
+  .bottom-nav button {
+    font-size: 11px;
+    padding: 10px 4px;
+  }
+
+  .menu-grid,
+  .contact-grid {
+    gap: 9px;
+  }
+
+  .menu-item {
+    padding: 12px;
+  }
+
+  .menu-item img {
+    width: calc(100% + 24px);
+    margin: -12px -12px 12px;
+    height: 105px;
   }
 }
