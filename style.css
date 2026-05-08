@@ -53,8 +53,6 @@ img {
   display: none !important;
 }
 
-/* HEADER */
-
 .site-header {
   position: fixed;
   top: 0;
@@ -109,13 +107,9 @@ img {
   color: var(--cream);
 }
 
-/* MOBILE NAV */
-
 .mobile-nav {
   display: none;
 }
-
-/* GENERAL PAGE */
 
 .page {
   min-height: 100vh;
@@ -131,8 +125,6 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
-
-/* TYPOGRAPHY */
 
 .section-label {
   margin: 0 0 14px;
@@ -181,8 +173,6 @@ p {
   max-width: 760px;
 }
 
-/* BUTTONS */
-
 .primary-button,
 .secondary-button,
 .text-button {
@@ -216,8 +206,6 @@ p {
 .text-button:hover {
   transform: translateY(-2px);
 }
-
-/* HOME HERO */
 
 .page-home {
   padding: 0;
@@ -311,8 +299,6 @@ p {
   font-size: 13px;
 }
 
-/* SECTIONS */
-
 .content-section {
   padding: 88px 20px;
 }
@@ -349,8 +335,6 @@ p {
 .image-card-tall {
   height: 430px;
 }
-
-/* OPENING HOURS */
 
 .highlight-section {
   padding-top: 40px;
@@ -399,8 +383,6 @@ p {
   font-weight: 800;
 }
 
-/* TEASERS */
-
 .section-heading {
   width: min(var(--max), 100%);
   margin: 0 auto 26px;
@@ -448,8 +430,6 @@ p {
   text-align: center;
 }
 
-/* PAGE HERO */
-
 .page-hero {
   width: min(var(--max), 100%);
   margin: 0 auto;
@@ -466,8 +446,6 @@ p {
 .small-page-hero p:not(.section-label) {
   max-width: 760px;
 }
-
-/* FEATURE */
 
 .feature-section {
   padding: 24px 0 44px;
@@ -491,8 +469,6 @@ p {
   object-fit: cover;
   border-radius: 26px;
 }
-
-/* MENU */
 
 .menu-section {
   padding: 34px 0 36px;
@@ -540,8 +516,6 @@ p {
   font-weight: 900;
 }
 
-/* ABOUT VALUES */
-
 .value-section {
   padding-top: 40px;
 }
@@ -569,8 +543,6 @@ p {
   font-family: Arial, sans-serif;
   font-size: 22px;
 }
-
-/* CONTACT */
 
 .contact-section {
   padding: 24px 0 34px;
@@ -614,8 +586,6 @@ p {
   object-fit: cover;
   border-radius: 26px;
 }
-
-/* RESERVATION */
 
 .reservation-section {
   padding-top: 26px;
@@ -682,8 +652,6 @@ textarea {
   box-shadow: var(--shadow-soft);
 }
 
-/* ANIMATION */
-
 @keyframes pageFade {
   from {
     opacity: 0;
@@ -695,8 +663,6 @@ textarea {
     transform: translateY(0);
   }
 }
-
-/* TABLET */
 
 @media (max-width: 980px) {
   .header-inner {
@@ -775,8 +741,6 @@ textarea {
     height: 320px;
   }
 }
-
-/* HANDY STANDARD */
 
 @media (max-width: 640px) {
   .header-inner {
@@ -919,8 +883,16 @@ textarea {
   }
 
   .teaser-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    display: flex;
+    gap: 14px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    scroll-snap-type: x mandatory;
+  }
+
+  .teaser-card {
+    min-width: 76%;
+    scroll-snap-align: start;
   }
 
   .teaser-card img {
@@ -1006,9 +978,21 @@ textarea {
     width: 100%;
     padding: 15px 18px;
   }
-}
 
-/* VERY SMALL PHONES */
+  input[type="date"],
+  input[type="time"],
+  input[type="number"],
+  input[type="email"],
+  input[type="text"] {
+    height: 52px;
+    min-height: 52px;
+    padding: 0 14px;
+    font-size: 16px;
+    line-height: 52px;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+}
 
 @media (max-width: 390px) {
   .logo-button {
