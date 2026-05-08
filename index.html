@@ -2,297 +2,594 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Café Milano</title>
+
+  <title>Café Milano – Kaffee, Frühstück & Reservierung</title>
+
+  <meta name="description" content="Café Milano: Kaffee, Croissants, Frühstück, Snacks und Reservierung in gemütlicher Café-Atmosphäre.">
+
+  <meta name="keywords" content="Café Milano, Kaffee, Frühstück, Croissant, Reservierung, Café, Cappuccino, Snacks">
+
+  <meta name="author" content="Café Milano">
+
+  <meta property="og:title" content="Café Milano – Kaffee, Frühstück & Reservierung">
+  <meta property="og:description" content="Gemütliches Café mit Kaffee, Croissants, Frühstück und kleinen Snacks.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/hero.jpg">
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header class="header">
-  <div class="logo" onclick="showPage('home')">Café Milano</div>
+<header class="site-header">
+  <div class="header-inner">
+    <button class="logo-button" onclick="showPage('home')" aria-label="Zur Startseite">
+      Café Milano
+    </button>
 
-  <nav id="navMenu" class="nav">
-    <button onclick="showPage('menu')">Karte</button>
-    <button onclick="showPage('contact')">Kontakt</button>
-    <button onclick="showPage('reservation')">Reservierung</button>
-  </nav>
+    <nav class="desktop-nav" aria-label="Hauptnavigation">
+      <button onclick="showPage('menu')">Karte</button>
+      <button onclick="showPage('about')">Über uns</button>
+      <button onclick="showPage('contact')">Kontakt</button>
+      <button class="nav-reserve" onclick="showPage('reservation')">Reservieren</button>
+    </nav>
+  </div>
 </header>
 
-<nav class="bottom-nav">
-  <button onclick="showPage('home')">Start</button>
-  <button onclick="showPage('menu')">Karte</button>
-  <button onclick="showPage('contact')">Kontakt</button>
-  <button onclick="showPage('reservation')">Reservieren</button>
+<nav class="mobile-nav" aria-label="Mobile Navigation">
+  <button onclick="showPage('home')">
+    <span>Start</span>
+  </button>
+
+  <button onclick="showPage('menu')">
+    <span>Karte</span>
+  </button>
+
+  <button onclick="showPage('contact')">
+    <span>Kontakt</span>
+  </button>
+
+  <button onclick="showPage('reservation')">
+    <span>Reservieren</span>
+  </button>
 </nav>
 
 <main>
 
-<section id="home" class="page">
-  <div class="hero">
+<section id="home" class="page page-home">
+
+  <section class="hero-section">
+    <div class="hero-background">
+      <img src="images/hero.jpg" alt="Café Milano Innenbereich mit Kaffeemaschine und Gebäck">
+    </div>
+
     <div class="hero-overlay"></div>
 
     <div class="hero-content">
-      <p class="tag">CAFÉ · FRÜHSTÜCK · GUTE MOMENTE</p>
-      <h1>Ein Ort für guten Kaffee, warme Croissants und ruhige Pausen.</h1>
-      <p>
-        Willkommen im Café Milano. Hier treffen frischer Kaffee, kleine Gerichte
-        und gemütliche Atmosphäre aufeinander.
+      <p class="section-label light-label">Café · Frühstück · Kaffee</p>
+
+      <h1>Guter Kaffee, warme Croissants und eine ruhige Pause vom Alltag.</h1>
+
+      <p class="hero-text">
+        Willkommen im Café Milano. Ein gemütlicher Ort für frischen Kaffee,
+        kleine Gerichte, süßes Gebäck und entspannte Momente.
       </p>
 
-      <div class="hero-buttons">
-        <button class="btn primary" onclick="showPage('menu')">Karte ansehen</button>
-        <button class="btn secondary" onclick="showPage('reservation')">Tisch reservieren</button>
-      </div>
-    </div>
-  </div>
-
-  <section class="page-section">
-    <div class="story-grid">
-      <div>
-        <p class="tag">ÜBER UNS</p>
-        <h2>Kleine Auszeit. Großer Geschmack.</h2>
-        <p>
-          Das Café Milano steht für gute Qualität, warme Atmosphäre und einfache Dinge,
-          die richtig gut gemacht sind: Kaffee, Gebäck, kleine Snacks und ein Ort,
-          an dem man gerne sitzen bleibt.
-        </p>
-        <p>
-          Ob kurzer Espresso, Frühstück mit Freunden oder ruhiger Nachmittag am Fenster:
-          Wir möchten, dass jeder Besuch sich ein bisschen wie Pause anfühlt.
-        </p>
+      <div class="hero-actions">
+        <button class="primary-button" onclick="showPage('menu')">Karte ansehen</button>
+        <button class="secondary-button" onclick="showPage('reservation')">Tisch reservieren</button>
       </div>
 
-      <div class="image-frame portrait-fix">
-        <img src="images/Interior.JPG" alt="Gemütlicher Innenraum im Café Milano">
+      <div class="hero-facts">
+        <div>
+          <strong>08:00</strong>
+          <span>Mo–Fr geöffnet</span>
+        </div>
+
+        <div>
+          <strong>21+</strong>
+          <span>Lieblingsprodukte</span>
+        </div>
+
+        <div>
+          <strong>★★★★★</strong>
+          <span>Beliebt bei Gästen</span>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="page-section">
-    <div class="hours-box">
-      <p class="tag">ÖFFNUNGSZEITEN</p>
-      <h2>Wir sind für dich da.</h2>
+  <section class="content-section intro-section">
+    <div class="section-grid two-columns">
+      <div class="text-block">
+        <p class="section-label">Über uns</p>
+
+        <h2>Kleine Auszeit. Großer Geschmack.</h2>
+
+        <p>
+          Café Milano steht für gute Qualität, warme Atmosphäre und einfache Dinge,
+          die richtig gut gemacht sind: Kaffee, Gebäck, kleine Snacks und ein Ort,
+          an dem man gerne sitzen bleibt.
+        </p>
+
+        <p>
+          Ob kurzer Espresso, Frühstück mit Freunden oder ruhiger Nachmittag am Fenster:
+          Wir möchten, dass jeder Besuch sich ein bisschen wie Pause anfühlt.
+        </p>
+
+        <button class="text-button" onclick="showPage('about')">Mehr erfahren</button>
+      </div>
+
+      <div class="image-card image-card-tall">
+        <img src="images/interior.jpg" alt="Gemütliche Sitzplätze im Café Milano">
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section highlight-section">
+    <div class="highlight-box">
+      <div>
+        <p class="section-label">Öffnungszeiten</p>
+        <h2>Wir sind für dich da.</h2>
+        <p>
+          Komm vorbei für Kaffee am Morgen, ein schnelles Frühstück oder eine entspannte Pause zwischendurch.
+        </p>
+      </div>
 
       <div class="hours-grid">
-        <div>
+        <div class="hours-item">
           <strong>Mo – Fr</strong>
           <span>08:00 – 18:00</span>
         </div>
-        <div>
+
+        <div class="hours-item">
           <strong>Samstag</strong>
           <span>09:00 – 16:00</span>
         </div>
-        <div>
+
+        <div class="hours-item">
           <strong>Sonntag</strong>
           <span>geschlossen</span>
         </div>
       </div>
     </div>
   </section>
+
+  <section class="content-section teaser-section">
+    <div class="section-heading">
+      <p class="section-label">Beliebt</p>
+      <h2>Unsere Gäste mögen besonders</h2>
+      <p>
+        Eine kleine Auswahl aus Kaffee, Gebäck und Frühstücksideen.
+      </p>
+    </div>
+
+    <div class="teaser-grid">
+      <article class="teaser-card">
+        <img src="images/coffee.jpg" alt="Kaffee mit Latte Art">
+        <h3>Cappuccino</h3>
+        <p>Cremig, weich und perfekt für den Start in den Tag.</p>
+      </article>
+
+      <article class="teaser-card">
+        <img src="images/croissant.jpg" alt="Croissant mit Kaffee">
+        <h3>Croissant</h3>
+        <p>Buttrig, frisch und besonders gut zum Kaffee.</p>
+      </article>
+
+      <article class="teaser-card">
+        <img src="images/avocado.jpg" alt="Avocado Toast">
+        <h3>Avocado Toast</h3>
+        <p>Frisch, leicht und ideal für ein modernes Frühstück.</p>
+      </article>
+    </div>
+
+    <div class="center-action">
+      <button class="primary-button" onclick="showPage('menu')">Komplette Karte ansehen</button>
+    </div>
+  </section>
+
 </section>
 
 <section id="menu" class="page hidden content-page">
-  <p class="tag">UNSERE KARTE</p>
-  <h2>Frisch, einfach und mit Liebe serviert.</h2>
-  <p class="intro">
-    Unsere Karte ist bewusst klar gehalten: guter Kaffee, frisches Gebäck,
-    kleine Snacks und Frühstücksideen für entspannte Café-Momente.
-  </p>
 
-  <div class="feature-image">
-    <img src="images/bakery.JPG" alt="Vitrine mit Gebäck">
-    <div>
-      <p class="tag">FRISCH AUS DER VITRINE</p>
-      <h3>Gebäck, Snacks und kleine Lieblingsstücke.</h3>
-      <p>
-        Perfekt für den schnellen Kaffee, ein kleines Frühstück oder eine entspannte Pause zwischendurch.
-      </p>
+  <section class="page-hero small-page-hero">
+    <p class="section-label">Unsere Karte</p>
+
+    <h1>Frisch, einfach und mit Liebe serviert.</h1>
+
+    <p>
+      Gute Getränke, süßes Gebäck, kleine Snacks und Frühstücksideen für entspannte Café-Momente.
+    </p>
+  </section>
+
+  <section class="feature-section">
+    <div class="feature-card">
+      <img src="images/bakery.jpg" alt="Gebäck und Snacks in der Vitrine">
+
+      <div>
+        <p class="section-label">Frisch aus der Vitrine</p>
+        <h2>Gebäck, Snacks und kleine Lieblingsstücke.</h2>
+        <p>
+          Perfekt für den schnellen Kaffee, ein kleines Frühstück oder eine ruhige Pause zwischendurch.
+        </p>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <h3 class="menu-category">Kaffee & Heißgetränke</h3>
-
-  <div class="menu-grid">
-    <div class="menu-item image-card">
-      <img src="images/Cappuccino.jpg" alt="Cappuccino">
-      <h3>Cappuccino</h3>
-      <p>Cremig, weich und mit feinem Milchschaum.</p>
-      <span>3,80 €</span>
-    </div>
-
-    <div class="menu-item image-card">
-      <img src="images/Cappuccino.jpg" alt="Latte Macchiato">
-      <h3>Latte Macchiato</h3>
-      <p>Mild, schaumig und besonders beliebt.</p>
-      <span>4,20 €</span>
+  <section class="menu-section">
+    <div class="menu-category-heading">
+      <p class="section-label">Kaffee & Heißgetränke</p>
+      <h2>Für den ersten Schluck des Tages</h2>
     </div>
 
-    <div class="menu-item image-card">
-      <img src="images/Cappuccino.jpg" alt="Espresso">
-      <h3>Espresso</h3>
-      <p>Klein, stark und perfekt für den Start.</p>
-      <span>2,50 €</span>
+    <div class="menu-grid">
+      <article class="menu-card">
+        <img src="images/cappuccino.jpg" alt="Cappuccino">
+        <div class="menu-card-content">
+          <h3>Cappuccino</h3>
+          <p>Cremig, weich und mit feinem Milchschaum.</p>
+          <span>3,80 €</span>
+        </div>
+      </article>
+
+      <article class="menu-card">
+        <img src="images/espresso.jpg" alt="Espresso">
+        <div class="menu-card-content">
+          <h3>Espresso</h3>
+          <p>Klein, stark und perfekt für den Start.</p>
+          <span>2,50 €</span>
+        </div>
+      </article>
+
+      <article class="menu-card">
+        <img src="images/latte.jpg" alt="Latte Macchiato">
+        <div class="menu-card-content">
+          <h3>Latte Macchiato</h3>
+          <p>Mild, schaumig und besonders beliebt.</p>
+          <span>4,20 €</span>
+        </div>
+      </article>
+
+      <article class="menu-card">
+        <img src="images/americano.jpg" alt="Americano">
+        <div class="menu-card-content">
+          <h3>Americano</h3>
+          <p>Schwarz, klar und angenehm kräftig.</p>
+          <span>3,20 €</span>
+        </div>
+      </article>
+
+      <article class="menu-card">
+        <img src="images/chocolate.jpg" alt="Heiße Schokolade">
+        <div class="menu-card-content">
+          <h3>Heiße Schokolade</h3>
+          <p>Süß, warm und perfekt für ruhige Tage.</p>
+          <span>4,10 €</span>
+        </div>
+      </article>
+
+      <article class="menu-card">
+        <img src="images/tea.jpg" alt="Tee">
+        <div class="menu-card-content">
+          <h3>Frischer Tee</h3>
+          <p>Verschiedene Sorten, sanft und aromatisch.</p>
+          <span>3,40 €</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="menu-section">
+    <div class="menu-category-heading">
+      <p class="section-label">Gebäck & Süßes</p>
+      <h2>Frisch, süß und perfekt zum Kaffee</h2>
     </div>
 
-    <div class="menu-item image-card">
-      <img src="images/Cappuccino.jpg" alt="Americano">
-      <h3>Americano</h3>
-      <p>Schwarz, klar und angenehm kräftig.</p>
-      <span>3,20 €</span>
+    <div class="menu-grid">
+      <article class="menu-card">
+        <img src="images/croissant.jpg" alt="Pistazien Croissant">
+        <div class="menu-card-content">
+          <h3>Pistazien-Croissant</h3>
+          <p>Buttrig, leicht süß und perfekt zum Kaffee.</p>
+          <span>4,20 €</span>
+        </div>
+      </article>
+
+      <article class="menu-card">
+        <img src="images/butter-croissant.jpg" alt="Butter Croissant">
+        <div class="menu-card-content">
+          <h3>Butter-Croissant</h3>
+          <p>Frisch, weich und genau richtig zum Kaffee.</p>
+          <span>2,90 €</span>
+        </div>
+      </article>
+
+      <article class="menu-card">
+        <img src="images/schoko-croissant.jpg" alt="Schoko Croissant">
+        <div class="menu-card-content">
+          <h3>Schoko-Croissant</h3>
+          <p>Blättrig mit feiner Schokoladenfüllung.</p>
+          <span>3,40 €</span>
+        </div>
+      </article>
+
+      <article class="menu-card">
+        <img src="images/cheesecake.jpg" alt="Cheesecake">
+        <div class="menu-card-content">
+          <h3>Cheesecake</h3>
+          <p>Cremig, sanft und mit feinem Boden.</p>
+          <span>4,90 €</span>
+        </div>
+      </article>
+
+      <article class="menu-card">
+        <img src="images/cinnamon-roll.jpg" alt="Zimtschnecke">
+        <div class="menu-card-content">
+          <h3>Zimtschnecke</h3>
+          <p>Warm, süß und mit leichter Zimtnote.</p>
+          <span>3,70 €</span>
+        </div>
+      </article>
+
+      <article class="menu-card">
+        <img src="images/tiramisu.jpg" alt="Tiramisu">
+        <div class="menu-card-content">
+          <h3>Tiramisu Glas</h3>
+          <p>Cremig, italienisch und hausgemacht.</p>
+          <span>5,20 €</span>
+        </div>
+      </article>
     </div>
-  </div>
+  </section>
 
-  <h3 class="menu-category">Gebäck & Süßes</h3>
-
-  <div class="menu-grid">
-    <div class="menu-item image-card">
-      <img src="images/Croissant.jpg" alt="Croissant">
-      <h3>Pistazien-Croissant</h3>
-      <p>Buttrig, leicht süß und perfekt zum Kaffee.</p>
-      <span>4,20 €</span>
+  <section class="menu-section">
+    <div class="menu-category-heading">
+      <p class="section-label">Frühstück & Snacks</p>
+      <h2>Leicht, frisch und sättigend</h2>
     </div>
 
-    <div class="menu-item image-card">
-      <img src="images/Croissant.jpg" alt="Butter Croissant">
-      <h3>Butter-Croissant</h3>
-      <p>Frisch, weich und genau richtig zum Kaffee.</p>
-      <span>2,90 €</span>
+    <div class="menu-grid">
+      <article class="menu-card">
+        <img src="images/avocado.jpg" alt="Avocado Toast mit Rucola">
+        <div class="menu-card-content">
+          <h3>Avocado Rucola Toast</h3>
+          <p>Frisch, grün und leicht mit Tomate und Rucola.</p>
+          <span>7,20 €</span>
+        </div>
+      </article>
+
+      <article class="menu-card">
+        <img src="images/toast.jpg" alt="Toast mit Ei und Avocado">
+        <div class="menu-card-content">
+          <h3>Toast mit Ei & Avocado</h3>
+          <p>Herzhaft, warm und perfekt zum Frühstück.</p>
+          <span>7,90 €</span>
+        </div>
+      </article>
+
+      <article class="menu-card">
+        <img src="images/panini.jpg" alt="Panini">
+        <div class="menu-card-content">
+          <h3>Panini Mozzarella</h3>
+          <p>Mit Tomate, Mozzarella und Basilikum.</p>
+          <span>6,50 €</span>
+        </div>
+      </article>
+
+      <article class="menu-card">
+        <img src="images/focaccia.jpg" alt="Focaccia">
+        <div class="menu-card-content">
+          <h3>Focaccia</h3>
+          <p>Italienisch, weich und herzhaft belegt.</p>
+          <span>6,90 €</span>
+        </div>
+      </article>
+
+      <article class="menu-card">
+        <img src="images/mozzarella-bowl.jpg" alt="Tomate Mozzarella Bowl">
+        <div class="menu-card-content">
+          <h3>Tomate-Mozzarella Bowl</h3>
+          <p>Frisch, leicht und mediterran.</p>
+          <span>8,40 €</span>
+        </div>
+      </article>
+
+      <article class="menu-card">
+        <img src="images/breakfast.jpg" alt="Milano Frühstücksteller">
+        <div class="menu-card-content">
+          <h3>Milano Frühstück</h3>
+          <p>Croissant, Kaffee, Obst und kleine Beilage.</p>
+          <span>9,90 €</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+</section>
+
+<section id="about" class="page hidden content-page">
+
+  <section class="page-hero small-page-hero">
+    <p class="section-label">Über uns</p>
+
+    <h1>Ein Café für gute Pausen und einfache Lieblingsmomente.</h1>
+
+    <p>
+      Café Milano verbindet moderne Café-Kultur mit gemütlicher Atmosphäre:
+      guter Kaffee, frisches Gebäck, kleine Snacks und ein Ort zum Ankommen.
+    </p>
+  </section>
+
+  <section class="content-section">
+    <div class="section-grid two-columns">
+      <div class="image-card image-card-tall">
+        <img src="images/interior.jpg" alt="Innenraum Café Milano">
+      </div>
+
+      <div class="text-block">
+        <p class="section-label">Unsere Idee</p>
+
+        <h2>Weniger Hektik, mehr Genuss.</h2>
+
+        <p>
+          Wir glauben, dass ein Café nicht kompliziert sein muss.
+          Es braucht guten Kaffee, freundliche Atmosphäre und Produkte,
+          die frisch, ehrlich und schön serviert werden.
+        </p>
+
+        <p>
+          Deshalb setzen wir auf klare Auswahl, gute Qualität und ein Ambiente,
+          in dem man gerne sitzen bleibt.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section value-section">
+    <div class="section-heading">
+      <p class="section-label">Wofür wir stehen</p>
+      <h2>Unsere Werte</h2>
     </div>
 
-    <div class="menu-item image-card">
-      <img src="images/Croissant.jpg" alt="Schoko Croissant">
-      <h3>Schoko-Croissant</h3>
-      <p>Blättrig mit feiner Schokoladenfüllung.</p>
-      <span>3,40 €</span>
-    </div>
+    <div class="value-grid">
+      <article>
+        <strong>01</strong>
+        <h3>Guter Kaffee</h3>
+        <p>Sauber zubereitet, aromatisch und zuverlässig gut.</p>
+      </article>
 
-    <div class="menu-item image-card">
-      <img src="images/bakery.JPG" alt="Süße Auswahl">
-      <h3>Milano Süßes</h3>
-      <p>Kleine Auswahl aus unserer Vitrine.</p>
-      <span>5,20 €</span>
-    </div>
-  </div>
+      <article>
+        <strong>02</strong>
+        <h3>Frische Auswahl</h3>
+        <p>Gebäck, Snacks und Frühstücksideen für jeden Moment.</p>
+      </article>
 
-  <h3 class="menu-category">Frühstück & Snacks</h3>
-
-  <div class="menu-grid">
-    <div class="menu-item image-card">
-      <img src="images/Avocado plus Rucula.jpg" alt="Avocado Rucola Toast">
-      <h3>Avocado Rucola Toast</h3>
-      <p>Frisch, grün und leicht mit Tomate und Rucola.</p>
-      <span>7,20 €</span>
+      <article>
+        <strong>03</strong>
+        <h3>Gemütliche Atmosphäre</h3>
+        <p>Ein Ort, der sich warm, ruhig und einladend anfühlt.</p>
+      </article>
     </div>
+  </section>
 
-    <div class="menu-item image-card">
-      <img src="images/Avocadotoast.jpg" alt="Avocado Toast">
-      <h3>Avocado Toast</h3>
-      <p>Herzhaft, frisch und perfekt zum Frühstück.</p>
-      <span>7,90 €</span>
-    </div>
-
-    <div class="menu-item image-card">
-      <img src="images/Toast mit Ei und Avocado.jpg" alt="Toast mit Ei und Avocado">
-      <h3>Toast mit Ei & Avocado</h3>
-      <p>Warm, sättigend und schön angerichtet.</p>
-      <span>8,40 €</span>
-    </div>
-
-    <div class="menu-item image-card">
-      <img src="images/Vitrine.jpg" alt="Vitrine">
-      <h3>Milano Snack</h3>
-      <p>Kleine herzhafte Auswahl aus der Vitrine.</p>
-      <span>6,50 €</span>
-    </div>
-  </div>
 </section>
 
 <section id="contact" class="page hidden content-page">
-  <p class="tag">KONTAKT</p>
-  <h2>Wir freuen uns auf deinen Besuch.</h2>
-  <p class="intro">
-    Du möchtest kurz vorbeikommen, einen Tisch reservieren oder eine Frage stellen?
-    Schreib uns oder komm während der Öffnungszeiten vorbei.
-  </p>
 
-  <div class="contact-grid">
-    <div>
-      <h3>Adresse</h3>
-      <p>Musterstraße 1<br>12345 Stadt</p>
-    </div>
+  <section class="page-hero small-page-hero">
+    <p class="section-label">Kontakt</p>
 
-    <div>
-      <h3>Telefon</h3>
-      <p>0123 456789</p>
-    </div>
+    <h1>Wir freuen uns auf deinen Besuch.</h1>
 
-    <div>
-      <h3>E-Mail</h3>
-      <p>info@cafemilano.de</p>
-    </div>
+    <p>
+      Komm vorbei, ruf uns an oder reserviere direkt einen Tisch.
+    </p>
+  </section>
 
-    <div>
-      <h3>Instagram</h3>
-      <p>@cafemilano</p>
-    </div>
-  </div>
+  <section class="contact-section">
+    <div class="contact-grid">
+      <article class="contact-card">
+        <h3>Adresse</h3>
+        <p>Musterstraße 1<br>12345 Stadt</p>
+      </article>
 
-  <div class="contact-highlight">
-    <div class="image-frame portrait-fix">
-      <img src="images/Interior.JPG" alt="Café Milano Atmosphäre">
-    </div>
+      <article class="contact-card">
+        <h3>Telefon</h3>
+        <p>0123 456789</p>
+      </article>
 
-    <div>
-      <h3>Ein Platz zum Ankommen.</h3>
-      <p>
-        Ob morgens vor der Arbeit, am Wochenende mit Freunden oder für eine kurze Pause:
-        Im Café Milano findest du warme Atmosphäre, guten Kaffee und kleine Lieblingsmomente.
-      </p>
-      <button class="btn primary" onclick="showPage('reservation')">Reservieren</button>
+      <article class="contact-card">
+        <h3>E-Mail</h3>
+        <p>info@cafemilano.de</p>
+      </article>
+
+      <article class="contact-card">
+        <h3>Instagram</h3>
+        <p>@cafemilano</p>
+      </article>
     </div>
-  </div>
+  </section>
+
+  <section class="content-section">
+    <div class="contact-highlight">
+      <img src="images/interior.jpg" alt="Café Milano Atmosphäre">
+
+      <div>
+        <p class="section-label">Besuch uns</p>
+
+        <h2>Ein Platz zum Ankommen.</h2>
+
+        <p>
+          Ob morgens vor der Arbeit, am Wochenende mit Freunden oder für eine kurze Pause:
+          Im Café Milano findest du warme Atmosphäre, guten Kaffee und kleine Lieblingsmomente.
+        </p>
+
+        <button class="primary-button" onclick="showPage('reservation')">Jetzt reservieren</button>
+      </div>
+    </div>
+  </section>
+
 </section>
 
 <section id="reservation" class="page hidden content-page">
-  <p class="tag">RESERVIERUNG</p>
-  <h2>Reserviere deinen Tisch.</h2>
-  <p class="intro">
-    Schick uns deine Anfrage – wir melden uns so schnell wie möglich zurück.
-  </p>
 
-  <form class="reservation-form" onsubmit="sendReservation(event)">
-    <label>
-      Name
-      <input type="text" id="name" placeholder="Dein Name" required>
-    </label>
+  <section class="page-hero small-page-hero">
+    <p class="section-label">Reservierung</p>
 
-    <label>
-      E-Mail
-      <input type="email" id="email" placeholder="Deine E-Mail" required>
-    </label>
+    <h1>Reserviere deinen Tisch.</h1>
 
-    <label>
-      Datum
-      <input type="date" id="date" required>
-    </label>
+    <p>
+      Schick uns deine Anfrage. Wir melden uns so schnell wie möglich zurück.
+    </p>
+  </section>
 
-    <label>
-      Uhrzeit
-      <input type="time" id="time" required>
-    </label>
+  <section class="reservation-section">
+    <form class="reservation-form" onsubmit="sendReservation(event)">
+      <div class="form-row">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Dein Name" required>
+      </div>
 
-    <label>
-      Personen
-      <input type="number" id="people" placeholder="Anzahl Personen" min="1" required>
-    </label>
+      <div class="form-row">
+        <label for="email">E-Mail</label>
+        <input type="email" id="email" name="email" placeholder="deine@email.de" required>
+      </div>
 
-    <label class="wide">
-      Nachricht
-      <textarea id="message" placeholder="Besondere Wünsche?"></textarea>
-    </label>
+      <div class="form-row">
+        <label for="date">Datum</label>
+        <input type="date" id="date" name="date" required>
+      </div>
 
-    <button class="btn primary wide" type="submit">Reservierung anfragen</button>
-  </form>
+      <div class="form-row">
+        <label for="time">Uhrzeit</label>
+        <input type="time" id="time" name="time" required>
+      </div>
+
+      <div class="form-row">
+        <label for="people">Personen</label>
+        <input type="number" id="people" name="people" placeholder="Anzahl Personen" min="1" max="20" required>
+      </div>
+
+      <div class="form-row wide-row">
+        <label for="message">Nachricht</label>
+        <textarea id="message" name="message" placeholder="Besondere Wünsche?"></textarea>
+      </div>
+
+      <button class="primary-button wide-row" type="submit">Reservierung anfragen</button>
+    </form>
+
+    <div class="reservation-note">
+      <h3>Hinweis</h3>
+      <p>
+        Diese Demo sendet aktuell keine echte Reservierung ab.
+        Für Kundenprojekte kann das Formular später mit E-Mail, Buchungssystem oder Datenbank verbunden werden.
+      </p>
+    </div>
+  </section>
+
 </section>
 
 </main>
